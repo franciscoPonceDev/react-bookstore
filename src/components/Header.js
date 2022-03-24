@@ -1,15 +1,16 @@
 import { Link } from 'react-router-dom';
+import './Header.css'
 
 const Header = () => (
   <header>
-    <h1 className="logo">Bookstore CMS</h1>
+    <h1 className="Bookstore-CMS">Bookstore CMS</h1>
     <nav className="nav">
       <ul>
         <li>
-          <Link to="/">Books</Link>
+          <Link className='BOOKS' to="/">Books</Link>
         </li>
         <li>
-          <Link to="categories">Categories</Link>
+          <Link className='CATEGORIES' to="categories">Categories</Link>
         </li>
       </ul>
     </nav>

@@ -1,3 +1,5 @@
+import './Form.css';
+
 const Form = () => (
   <div className="form-container">
     <h2 className="form-title">ADD BOOK</h2>
