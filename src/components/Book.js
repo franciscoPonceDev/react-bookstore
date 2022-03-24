@@ -11,9 +11,9 @@ const Book = (props) => {
         <h3 className="Title">{title}</h3>
         <p className="Suzanne-Collins">{author}</p>
         <div className="book-header-buttons">
-          <button className='Comments' type="button">Comments</button>
-          <button className='Comments' type="button">Remove</button>
-          <button className='Comments' type="button">Edit</button>
+          <button className="Comments" type="button">Comments</button>
+          <button className="Comments" type="button">Remove</button>
+          <button className="Comments" type="button">Edit</button>
         </div>
       </div>
       <div className="progress" />

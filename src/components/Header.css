@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
-Header {
+header {
   display: flex;
   padding: 1rem 3rem;
   align-items: center;
@@ -12,7 +12,6 @@ Header {
   height: 2.313rem;
   font-size: 1.875rem;
   font-family: Montserrat, sans-serif;
-  font-size: 1.875rem;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -38,7 +37,7 @@ Header {
   width: 6.563rem;
   height: 1rem;
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 0.813rem;
   font-weight: normal;
   font-stretch: normal;
