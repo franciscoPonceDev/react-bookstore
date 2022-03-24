@@ -47,7 +47,7 @@ header {
   color: var(--black-two);
 }
 
-ul {
+.d-flex {
   display: flex;
 }
 
