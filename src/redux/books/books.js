@@ -2,11 +2,11 @@ const ADD_BOOK = 'ADD_BOOK';
 const DELETE_BOOK = 'DELETE_BOOK';
 
 const newBook = (action) => {
-  const { title, author, catogory } = action;
+  const { title, author, genre } = action;
   return {
     title,
     author,
-    catogory,
+    genre,
     id: Date.now(),
   };
 };
@@ -27,11 +27,11 @@ export default function booksReducer(state = [], action) {
   }
 }
 
-export const addBook = (title, author, category) => ({
+export const addBook = (title, author, genre) => ({
   type: ADD_BOOK,
   title,
   author,
-  category,
+  genre,
 });
 
 export const deleteBook = (id) => ({
