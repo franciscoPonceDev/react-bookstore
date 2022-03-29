@@ -6,7 +6,6 @@ import { addBook } from '../redux/books/books';
 const Form = () => {
   const [titleValue, setTitleValue] = useState();
   const [authorValue, setAuthorValue] = useState();
-  const [genreValue, setGenreValue] = useState();
 
   const dispatch = useDispatch();
 
@@ -15,7 +14,6 @@ const Form = () => {
     dispatch(addBook({
       title: titleValue,
       author: authorValue,
-      genre: genreValue,
     }));
   };
 
@@ -39,7 +37,7 @@ const Form = () => {
           value={authorValue}
           onChange={(event) => setAuthorValue(event.target.value)}
         />
-        <div className="form-book-category">
+        {/* <div className="form-book-category">
           <select className="select" default name="category">
             <option value="">
               Category
@@ -75,7 +73,7 @@ const Form = () => {
               Kodomomuke
             </option>
           </select>
-        </div>
+        </div> */}
         <button className="add-btn" type="submit">
           ADD BOOK
         </button>
