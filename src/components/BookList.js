@@ -1,19 +1,15 @@
-import { useSelector, shallowEqual } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Book from './Book';
 
-const BookList = () => {
-  const books = useSelector((state) => state.books, shallowEqual);
-
-  return books.map((book) => (
-    <Book
-      genre={book.genre}
-      title={book.title}
-      author={book.author}
-      key={book.id}
-      completed={book.completed}
-      chapter={book.chapter}
-    />
-  ));
+const Booklist = () => {
+  const bookList = useSelector((state) => state.booksReducer);
+  return (
+    <ul>
+      {bookList.map((item) => (
+        <Book category={item.category} title={item.title} key={item.item_id} id={item.item_id} />
+      ))}
+    </ul>
+  );
 };
 
-export default BookList;
+export default Booklist;

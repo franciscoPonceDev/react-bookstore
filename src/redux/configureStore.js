@@ -1,16 +1,10 @@
-import { combineReducers, createStore } from 'redux';
-import booksReducer from './books/books';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import booksReducer, { getBooksFromAPI } from './books/books';
 import categoriesReducer from './categories/categories';
 
-const initialState = {
-  books: [{
-    id: 1,
-    title: 'Il Principe',
-    author: 'Machiavelli',
-  }],
-};
-
-const rootReducer = combineReducers({ books: booksReducer, categories: categoriesReducer });
-const store = createStore(rootReducer, initialState);
+const rootReducer = combineReducers({ booksReducer, categoriesReducer });
+const store = createStore(rootReducer, applyMiddleware(thunk));
+store.dispatch(getBooksFromAPI());
 
 export default store;
