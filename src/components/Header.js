@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import './Header.css';
+import { ImUser } from 'react-icons/im';
+import './Header.scss';
 
 const Header = () => (
   <header>
@@ -13,6 +14,7 @@ const Header = () => (
           <Link className="CATEGORIES" to="categories">Categories</Link>
         </li>
       </ul>
+      <ImUser className="user-icon" />
     </nav>
   </header>
 );
