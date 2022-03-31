@@ -101,7 +101,7 @@ const Form = () => {
           ADD BOOK
         </button>
       </form>
-      <p>{errorMsg}</p>
+      <p className="error">{errorMsg}</p>
     </div>
   );
 };

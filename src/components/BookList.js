@@ -1,3 +1,4 @@
+/* eslint-disable prefer-template */
 import { useSelector } from 'react-redux';
 import Book from './Book';
 
@@ -6,7 +7,13 @@ const Booklist = () => {
   return (
     <ul>
       {bookList.map((item) => (
-        <Book category={item.category} title={item.title} key={item.item_id} id={item.item_id} />
+        <Book
+          category={item.category}
+          title={item.title}
+          key={item.item_id}
+          id={item.item_id}
+          progress={Math.floor(Math.random() * 100) + 1 + '%'}
+        />
       ))}
     </ul>
   );
