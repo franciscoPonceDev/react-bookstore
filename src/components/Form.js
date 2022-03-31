@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './Form.css';
 import { useDispatch } from 'react-redux';
 import { addBookToAPI } from '../redux/books/books';
 
@@ -68,7 +67,7 @@ const Form = () => {
   return (
     <div className="form-container">
       <h2 className="form-title">ADD BOOK</h2>
-      <form onSubmit={submitBookToStore}>
+      <form className="flex flex-wrap" onSubmit={submitBookToStore}>
         <input
           className="form-book-title"
           type="text"
@@ -97,7 +96,7 @@ const Form = () => {
             ))}
           </select>
         </div>
-        <button className="add-btn" type="submit">
+        <button className="add-btn flex" type="submit">
           ADD BOOK
         </button>
       </form>

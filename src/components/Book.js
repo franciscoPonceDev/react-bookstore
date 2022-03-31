@@ -18,7 +18,7 @@ const Book = (props) => {
         <span className="book-header-category">{category}</span>
         <h3 className="book-header-title">{title}</h3>
         <p className="book-header-author">{author}</p>
-        <div className="book-header-buttons">
+        <div className="book-header-buttons flex">
           <button type="button">Comments</button>
           <button type="button" onClick={removeBookFromStore}>
             Remove
@@ -26,8 +26,8 @@ const Book = (props) => {
           <button type="button">Edit</button>
         </div>
       </div>
-      <div className="book-data">
-        <div className="book-progress">
+      <div className="book-data flex">
+        <div className="book-progress flex">
           <div className="book-progress-bar">
             <div className="inner" />
             <div className="circle">
@@ -44,7 +44,7 @@ const Book = (props) => {
             <p className="book-progress-value-completed">Completed</p>
           </div>
         </div>
-        <div className="book-chapter">
+        <div className="book-chapter flex">
           <span className="book-chapter-title">CURRENT CHAPTER</span>
           <span className="book-chapter-current">
             Chapter-

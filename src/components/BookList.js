@@ -5,7 +5,7 @@ import Book from './Book';
 const Booklist = () => {
   const bookList = useSelector((state) => state.booksReducer);
   return (
-    <ul>
+    <ul className="flex">
       {bookList.map((item) => (
         <Book
           category={item.category}
